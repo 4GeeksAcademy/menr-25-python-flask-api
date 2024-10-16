@@ -3,8 +3,15 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 todos = [
-   {},
-]
+    {
+        "done": true,
+        "label": "Sample Todo 1"
+    },
+    {
+        "done": true,
+        "label": "Sample Todo 2"
+    }
+];
 
 @app.route("/todos", methods=["GET"])
 def get_todos():
